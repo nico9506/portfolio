@@ -1,34 +1,34 @@
 :root {
-	--darker-numix: #2d2d2d;
-	--dark-numix: #3d3d3d;
-	--gray-numix: #535353;
-	--light-numix: #dcdcdc;
-	--red-numix: #d64937;
-	--navbar-height: 5rem;
+  --darker-numix: #2d2d2d;
+  --dark-numix: #3d3d3d;
+  --gray-numix: #535353;
+  --light-numix: #dcdcdc;
+  --red-numix: #d64937;
+  --navbar-height: 5rem;
 }
 
 /* Base reset */
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* box-sizing and font sizing */
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 
-	/* Set font size for easy rem calculations
+  /* Set font size for easy rem calculations
      * default document font size = 16px, 1rem = 16px, 100% = 16px
      * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
     */
-	font-size: 62.5%;
-	scroll-behavior: smooth;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 /* A few media query to set some font sizes at different screen sizes.
@@ -48,305 +48,310 @@ html {
 
 /* 1200px / 16px = 75em */
 @media (max-width: 75em) {
-	html {
-		font-size: 60%;
-	}
+  html {
+    font-size: 60%;
+  }
 }
 
 /* 980px / 16px = 61.25em */
 @media (max-width: 61.25em) {
-	html {
-		font-size: 58%;
-	}
+  html {
+    font-size: 58%;
+  }
 }
 
 /* 460px / 16px = 28.75em */
 @media (max-width: 28.75em) {
-	html {
-		font-size: 55%;
-	}
+  html {
+    font-size: 55%;
+  }
 }
 
 /* ###########-----------------########### */
 
 body {
-	background: radial-gradient(var(--gray-numix), var(--darker-numix));
-	font-family: "Courier New", Courier, monospace;
+  background: radial-gradient(var(--gray-numix), var(--darker-numix));
+  font-family: "Courier New", Courier, monospace;
 }
 
 /* ##############------------ NAVBAR -------------################ */
 
 #navbar {
-	width: 100%;
-	height: var(--navbar-height);
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: var(--darker-numix);
-	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
-	display: flex;
-	align-content: center;
-	justify-content: flex-end;
-	flex-wrap: wrap;
-	padding-inline-start: 0;
-	margin-block: 0;
-	z-index: 10;
+  width: 100%;
+  height: var(--navbar-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--darker-numix);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-content: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  padding-inline-start: 0;
+  margin-block: 0;
+  z-index: 10;
 }
 
 #navbar a {
-	font-size: 2rem;
-	margin: 0 4rem 0 0;
-	color: var(--light-numix);
-	font-weight: 700;
-	text-decoration: none;
+  font-size: 2rem;
+  margin: 0 4rem 0 0;
+  color: var(--light-numix);
+  font-weight: 700;
+  text-decoration: none;
 }
 
 #navbar a:hover {
-	color: var(--red-numix);
+  color: var(--red-numix);
 }
 
 main {
-	color: var(--light-numix);
+  color: var(--light-numix);
 }
 
 section {
-	min-height: fit-content;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	min-width: 40rem;
+  min-height: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 40rem;
 }
 
 /* ##############------------ WELCOME SECTION -------------################ */
 
 #welcome-section {
-	width: 90%;
-	max-width: 100rem;
-	height: 100vh;
+  width: 90%;
+  max-width: 100rem;
+  height: 100vh;
 }
 
 #welcome-section .col-left {
-	width: 60%;
+  width: 60%;
 }
 
 #welcome-section .col-right {
-	width: 40%;
+  width: 40%;
 }
 
 #welcome-section .col-left h1 {
-	font-size: 5rem;
-	margin-bottom: 3rem;
-	color: var(--red-numix);
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  color: var(--red-numix);
 }
 
 #welcome-section img {
-	height: 35rem;
-	width: 35rem;
-	object-fit: cover;
-	border-radius: 100%;
-	margin: 0 4rem;
+  height: 35rem;
+  width: 35rem;
+  object-fit: cover;
+  border-radius: 100%;
+  margin: 0 4rem;
 }
 
 #welcome-section .col-left p {
-	font-size: 2rem;
-	margin: 1rem 0;
+  font-size: 2rem;
+  margin: 1rem 0;
 }
 
 #welcome-section ul {
-	text-align: left;
-	margin: 2rem 0 1rem 3rem;
-	font-size: 1.8rem;
+  text-align: left;
+  margin: 2rem 0 1rem 3rem;
+  font-size: 1.8rem;
 }
 
 /* ##############------------ PROJECTS -------------################ */
 
 #projects {
-	width: 100%;
-	height: fit-content;
-	background-color: var(--gray-numix);
-	text-align: center;
-	padding: 5rem 0;
-	display: block;
+  width: 100%;
+  height: fit-content;
+  background-color: var(--gray-numix);
+  text-align: center;
+  padding: 5rem 0;
+  display: block;
 }
 
 #projects h2 {
-	font-size: 2.5rem;
-	font-weight: 400;
-	margin: var(--navbar-height) auto;
-	width: 60%;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin: var(--navbar-height) auto;
+  width: 60%;
 }
 
 #projects .tiles {
-	width: 90%;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	gap: 2rem;
-	flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 #projects .project-tile {
-	background-color: var(--light-numix);
-	color: var(--darker-numix);
-	height: fit-content;
-	width: 30%;
-	min-width: 30rem;
-	text-align: center;
-	padding: 0 0 1.6rem 0;
-	border-radius: 2%;
-	border: 3px solid var(--gray-numix);
+  background-color: var(--light-numix);
+  color: var(--darker-numix);
+  height: fit-content;
+  width: 30%;
+  min-width: 30rem;
+  text-align: center;
+  padding: 0 0 1.6rem 0;
+  border-radius: 2%;
+  border: 3px solid var(--gray-numix);
 }
 
 #projects .project-tile:hover {
-	border: 3px solid var(--darker-numix);
-	transition: border 0.2s ease-out;
+  border: 3px solid var(--darker-numix);
+  transition: border 0.2s ease-out;
 }
 
 #projects .project-tile a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 #projects .project-tile a h3 {
-	font-size: 2rem;
-	color: var(--light-numix);
-	background-color: var(--darker-numix);
-	padding: 1rem 0;
+  font-size: 2rem;
+  color: var(--light-numix);
+  background-color: var(--darker-numix);
+  padding: 1rem 0;
 }
 
 #projects .project-tile a h3:hover {
-	color: var(--red-numix);
-	transition: color 0.5s ease-out;
+  color: var(--red-numix);
+  transition: color 0.5s ease-out;
 }
 
 #projects .project-tile a p {
-	font-size: 1.5rem;
-	color: var(--darker-numix);
+  font-size: 1.5rem;
+  color: var(--darker-numix);
 }
 
 #projects .project-tile a img {
-	width: 90%;
-	margin: 1rem auto;
+  width: 90%;
+  margin: 1rem auto;
 }
 
 /* ##############------------ FOOTER - CONTACT ME -------------################ */
 
 #contact {
-	height: 80vh;
-	min-height: 40rem;
-	display: flex;
-	text-align: center;
-	align-items: center;
-	flex-direction: column;
+  height: 80vh;
+  min-height: 40rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #contact h1 {
-	font-size: 4rem;
+  font-size: 4rem;
 }
 
 #contact p {
-	font-size: 1.8rem;
-	font-style: italic;
-	width: 60%;
-	margin: 2rem auto 6rem;
+  font-size: 1.8rem;
+  font-style: italic;
+  width: 60%;
+  margin: 2rem auto 6rem;
 }
 
 #contact a {
-	font-size: 2.3rem;
-	margin: 2rem 4rem 0 0;
-	color: var(--light-numix);
-	font-weight: 600;
-	text-decoration: none;
+  font-size: 2.3rem;
+  /*margin: 2rem 4rem 0 0;*/
+  color: var(--light-numix);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 #contact ul {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	flex-direction: row;
-	text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  text-align: center;
+  gap: 3rem;
 }
 
 ul {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 #contact a:hover {
-	color: var(--red-numix);
+  color: var(--red-numix);
 }
 
 footer {
-	background-color: var(--red-numix);
-	box-shadow: 0 -2px 0 rgba(255, 0, 0, 0.4);
-	color: var(--light-numix);
-	height: var(--navbar-height) * 2;
-	width: 100%;
-	text-align: end;
-	padding: 1rem 2rem;
+  background-color: var(--red-numix);
+  box-shadow: 0 -2px 0 rgba(255, 0, 0, 0.4);
+  color: var(--light-numix);
+  height: var(--navbar-height) * 2;
+  width: 100%;
+  text-align: end;
+  padding: 1rem 2rem;
 }
 
 footer h3 {
-	font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 footer p {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 footer p.mod-date {
-	font-size: 1.6rem;
-	font-weight: 800;
+  font-size: 1.6rem;
+  font-weight: 800;
 }
 
 footer p.mod-date::before {
-	content: "Updated: ";
+  content: "Updated: ";
 }
 
 @media (max-width: 1080px) {
-	#welcome-section img {
-		height: 25rem;
-		width: 25rem;
-	}
+  #welcome-section img {
+    height: 25rem;
+    width: 25rem;
+  }
 }
 
 @media (max-width: 720px) {
-	#welcome-section .col-left {
-		width: 100%;
-	}
+  #welcome-section .col-left {
+    width: 100%;
+  }
 
-	#welcome-section .col-right {
-		width: 100%;
-		text-align: center;
-	}
+  #welcome-section .col-right {
+    width: 100%;
+    text-align: center;
+  }
 
-	#welcome-section .col-left h1 {
-		font-size: 3rem;
-		text-align: center;
-	}
+  #welcome-section .col-left h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
 
-	#welcome-section .col-left p {
-		font-size: 1.5rem;
-	}
+  #welcome-section .col-left p {
+    font-size: 1.5rem;
+  }
 
-	#welcome-section .col-left ul {
-		font-size: 1.4rem;
-	}
+  #welcome-section .col-left ul {
+    font-size: 1.4rem;
+  }
 
-	#welcome-section {
-		flex-direction: column-reverse;
-	}
+  #welcome-section {
+    flex-direction: column-reverse;
+  }
 
-	#projects .project-tile {
-		width: 50rem;
-	}
+  #projects .project-tile {
+    width: 50rem;
+  }
 
-	#projects h2 {
-		width: 80%;
-	}
+  #projects h2 {
+    width: 80%;
+  }
 
-	#contact ul {
-		flex-direction: column;
-	}
+  #contact ul {
+    flex-direction: column;
+  }
+
+  #contact ul li a {
+    margin: 0;
+  }
 }

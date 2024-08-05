@@ -26,26 +26,58 @@
       <section id="welcome-section">
         <div class="col-left">
           <h1>Hi, I'm Nico</h1>
+          <h2>Web developer</h2>
+          <h3>GNU/Linux - MERN web stack - SAP - MS Excel and Power BI</h3>
           <p>
-            Dedicated industrial engineer with 4 years of experience in quality
-            management systems (QMS), SAP SuccessFactors Administration (human
-            resources), and business analytics.
+            Passionate about open-source software and blockchain technology.
           </p>
-          <p>
-            Currently pursuing self-study in web development and IT. Passionate
-            about open-source software and blockchain technology.
-          </p>
-          <ul>
-            <li>
-              Industrial Engineering - National University of Colombia
-              (2012-2017)
-            </li>
-            <li>
-              Diploma of Information Technology - Laneway Education (Melbourne)
-              (2023-2025)
-            </li>
-          </ul>
         </div>
+
+        <div class="details">
+          <button class="accordion">Professional Summary</button>
+          <div class="panel">
+            <p>
+              Dedicated industrial engineer with 4 years of experience in
+              quality management systems (QMS), SAP SuccessFactors
+              Administration (human resources), and business analytics.
+              Currently pursuing self-study in web development and IT.
+            </p>
+          </div>
+
+          <button class="accordion">Professional Experience</button>
+          <div class="panel">
+            <h3>Back-end Developer - Pathfinders - Melbourne (AU)</h3>
+            <h4>May 2024 - Present</h4>
+            <p>
+              <ul>
+                <li>Volunteering as back-end developer in a multidisciplinary team to build full-stack apps</li>
+                <li>Used technologies such as AWS, MongoDB and NodeJS</li>
+              </ul>
+            </p>
+            <h3>Business analyst - Banco de Bogota - Bogota (CO)</h3>
+            <h4>Aug 2018 - Oct 2022</h4>
+            <p>
+              <ul>
+                <li>Implemented and managed SAP SuccessFactors for HR processes.</li>
+                <li>Developed and maintained QMS, ensuring compliance with ISO standards.</li>
+                <li>Conducted data analysis to identify process bottlenecks and implemented solutions.</li>
+                <li>Collaborated with cross-functional teams to streamline operations.</li>
+              </ul>
+            </p>
+          </div>
+
+          <button class="accordion">Education</button>
+          <div class="panel">
+            <h3>Diploma of Information Technology - Laneway Education - Melbourne (AU)</h3>
+            <h4>May 2023 - May 2025</h4>
+            <p>Web development specialization (MERN Stack)</p>
+            
+            <h3>Industrial Engineering - National University of Colombia - Bogota (CO)</h3>
+            <h4>Jan 2012 - Dic 2017</h4>
+            <p>Worked in the Tech Department of the Central Bank of Colombia as intern</p>
+          </div>
+        </div>
+
         <div class="col-right">
           <img src="media/profile-picture.jpg" alt="profile picture" />
         </div>
@@ -163,5 +195,21 @@
       <p class="mod-date">Jul 17, 2024</p>
       <p>Melbourne, VIC</p>
     </footer>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
   </body>
 </html>

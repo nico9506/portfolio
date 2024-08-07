@@ -107,13 +107,17 @@ body {
 
 main {
   color: var(--light-numix);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 section {
   min-height: fit-content;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-width: 40rem;
@@ -124,12 +128,13 @@ section {
 
 #welcome-section {
   display: grid;
-  grid-template: auto auto auto / 1fr;
+  grid-template: 1fr 1fr auto / 1fr;
   grid-template-areas:
     "photo"
     "intro"
     "details";
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
 }
 
 #welcome-section .col-left {
@@ -147,7 +152,6 @@ section {
 
 #welcome-section .details {
   grid-area: details;
-  height: fit-content;
   align-self: flex-start;
 }
 
@@ -439,7 +443,7 @@ footer p.mod-date::before {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   #welcome-section {
-    grid-template: 2fr 1fr / 2fr 1fr;
+    grid-template: 2fr auto / 2fr 1fr;
     grid-template-areas:
       "intro photo"
       "details details";
